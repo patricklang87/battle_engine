@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Beverly vs. Battle Bot</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+  </head>
+
+
+
+  <body>
+
+
+    <div class="grid">
+      <div class="box titleBox">
+        <div id="pageHeading">
+          <h1>Beverly vs. Battle Bot</h1>
+        </div>
+      </div>
+      <div class="box b">B</div>
+      <div class="box c">
+        <img id="imgDiv">
+        </img>
+      </div>
+      <div class="box d">
+        <img id="imgDiv2">
+        </img>
+      </div>
+      <div class="box e">E</div>
+      <div class="cntrlArea box cntrlButtons">
+        <p id="controlButtons"><button id="start" class="setUpButton" onclick="createHeroSelect()">Start!</button></p>
+        <p id="contSequence"></p>
+      </div>
+      <div class="box batInfoBox">
+          <p id="batInfo">Click "Start" to Begin!</p>
+      </div>
+      <div class="cntrlArea box heroHP">
+        <table>
+          <td>
+            <p id="heroHP"></p>
+            <p id="heroMP"></p>
+          </td>
+        </table>
+      </div>
+      <div class="cntrlArea box enemyHP">
+        <table>
+          <td>
+            <p id="enemyHP"></p>
+            <p id="enemyMP"></p>
+          </td>
+        </table>
+      </div>
+    </div>
+
+    <br>
+
+      <button id="resetPage" class="hidden setUpButton" onclick="resetPage(hero.callName, enemy.callName)">Reset</button>
+
+    <script src="index.js"></script>
+  </body>
+
+</html>

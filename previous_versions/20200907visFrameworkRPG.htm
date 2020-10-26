@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <style>
+
+       #imgDiv {
+         overflow: hidden;
+       }
+
+      .normColor {
+        font-size: 20px;
+        background-color: hsla(180, 50%, 50%, 1);
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+      }
+
+      .grid {
+        display: grid;
+        border-radius: 5px;
+        height: 600px;
+        width: 800px;
+        grid-template-columns: 10% 40% 40% 10%;
+        grid-template-rows: 10% 50% 10% 10% 10%;
+        background-color: dodgerblue;
+      }
+
+      .box {
+        background-color: hsla(180, 50%, 50%, 1);
+        color: black;
+        border-radius: 5px;
+        border: 5px dodgerblue solid;
+      }
+
+      .titleBox {
+        grid-area: 1 / 1 / span 1 / span 6;
+      }
+
+      .b {
+        grid-area: 2 / 1 / span 5 / span 1;
+      }
+
+      .e {
+        grid-area: 2 / 4 / span 5 / span 1;
+      }
+
+      .h {
+        grid-area: 3 / 2 / span 1 / span 1;
+      }
+
+      .i {
+        grid-area: 3 / 3 / span 1 / span 1;
+      }
+
+      .f {
+        grid-area: 4 / 2 / span 2 / span 2
+      }
+
+      .g {
+        grid-area: 6 / 2 / span 1 / span 2
+      }
+
+      .cntrlArea {
+        border: 5px silver solid;
+      }
+
+
+
+    </style>
+  </head>
+
+ <body>
+
+  <div class="grid">
+    <div class="box titleBox">Title</div>
+    <div class="box b">B</div>
+    <div class="box c">
+      <img id="imgDiv">
+      </img>
+    </div>
+    <div class="box d">D</div>
+    <div class="box e">E</div>
+    <div class="cntrlArea box g">
+      <div id="buttonDiv">
+      </div>
+    </div>
+    <div class="box f">F</div>
+    <div class="cntrlArea box h">H</div>
+    <div class="cntrlArea box i">I</div>
+  </div>
+
+
+
+    <script src="20200907visFrameworkRPG.js"></script>
+  </body>
+
+</html>

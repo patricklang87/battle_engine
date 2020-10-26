@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <style>
+      .hidden {
+        display: none;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <button id="button1" onclick="toggleHidden(`button1`); toggleHidden(`button2`)">button1</button>
+    <button id="button2" onclick="toggleHidden(`button2`), toggleHidden(`button1`)" class="hidden">button2</button>
+
+    <script>
+      function toggleHidden(item) {
+        let element = document.getElementById(item);
+        if (element.classList.contains("hidden") == true) element.classList.remove("hidden");
+        else element.classList.add("hidden");
+       } 
+    </script>
+  </body>
+
+</html>

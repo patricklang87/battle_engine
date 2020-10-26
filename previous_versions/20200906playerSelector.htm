@@ -1,0 +1,59 @@
+
+<html>
+<head>
+
+</head>
+<body>
+<div id="box3">Hit start to begin!
+</div>
+<div id="box1">
+<button id="start" onclick="createHeroSelect()">Start!</button>
+</div>
+<div id="box2">
+</div>
+
+<script>
+let beverly = {
+  disName: "Beverly",
+  callName: "beverly"
+}
+let battleBot = {
+  disName: "Battle Bot",
+  callName: "battleBot"
+}
+
+let figAr =["beverly", "battleBot"];
+
+
+const createHeroSelect = () => {
+  document.getElementById("box3").innerHTML = "Select your fighter!";
+  let figSelButtons = "";
+  for (let i in figAr) figSelButtons = figSelButtons.concat(`<button id="${figAr[i]}Sel" onclick="heroSelect(${figAr[i]})";}>${figAr[i]}</button>`);
+  document.getElementById("box1").innerHTML = figSelButtons;
+}
+
+const heroSelect = (selFig) => {
+  let hero = selFig.callName;
+  enemyAr = [];
+  let enemySelButtons = "";
+  for (let i in figAr) if (figAr[i] != selFig.callName) enemyAr.push(figAr[i]);
+  for (let i in enemyAr) enemySelButtons = enemySelButtons.concat(`<button id="${enemyAr[i]}Sel" onclick="enemySel(${hero}, ${enemyAr[i]})";}>${enemyAr[i]}</button>`);
+  document.getElementById("box1").innerHTML = enemySelButtons;
+  document.getElementById("box3").innerHTML = "Select your enemy!";
+}
+
+const enemySel = (hero, enemy) => {
+  let beginBattleButton = `<button id="beginBattle" onclick="beginBattle(${hero}, ${enemy})">Fight!</battle>`;
+  document.getElementById("box1").innerHTML = beginBattleButton;
+  document.getElementById("box3").innerHTML = "Hit fight to begin!";
+  console.log(hero.callName, enemy.callName, hero.disName, enemy.disName);
+}
+
+const beginBattle = (hero, enemy) => {
+  console.log(hero.callName);
+  document.getElementById("box2").innerHTML = hero.callName + enemy.callName + hero.disName + enemy.disName ;
+}
+
+</script>
+</body>
+</html>
