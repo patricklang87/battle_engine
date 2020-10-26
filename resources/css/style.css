@@ -6,7 +6,7 @@ body {
 
 h1 {
   font-family: 'Bangers', cursive;
-  font-size: 15px;
+  font-size: 30px;
   text-align: center;
   color: hsla(80, 70%, 50%, 1);
   text-shadow: 2px 2px hsla(260, 70%, 50%, 1)
@@ -53,11 +53,13 @@ table {
 
 #imgDiv {
   overflow: hidden;
+  background: white;
 }
 
 #imgDiv2 {
   overflow: hidden;
   transform: scaleX(-1);
+  background: white;
 }
 
 
@@ -67,7 +69,7 @@ table {
  height: 650px;
  width: 1200px;
  grid-template-columns: 30% 26% 26% 2%;
- grid-template-rows: 8% 40% 8% 8% 8% 8% 8%;
+ grid-template-rows: 12% 40% 8% 8% 8% 12%;
  column-gap: 2%;
  row-gap: 2%;
 }
@@ -84,10 +86,6 @@ table {
  background-color: hsla(180, 60%, 20%, 0.8);
  width: 80%;
  margin: auto;
-}
-
-.b {
- grid-area: 2 / 1 / span 5 / span 1;
 }
 
 .e {
@@ -115,8 +113,9 @@ table {
 }
 
 .batInfoBox {
- grid-area: 5 / 2 / span 1 / span 2;
+ grid-area: 2 / 1 / span 5 / span 1;
  background-color: hsla(180, 60%, 20%, 1);
+ font-size: 30px;
  border: 10px black;
  border-radius: 10px;
  padding: 20px;
@@ -126,7 +125,7 @@ table {
 }
 
 .cntrlButtons {
- grid-area: 6 / 2 / span 2 / span 2;
+ grid-area: 5 / 2 / span 2 / span 2;
  background-color: hsla(180, 60%, 20%, 1);
  border: 10px black;
  border-radius: 10px;
